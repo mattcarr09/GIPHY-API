@@ -46,7 +46,7 @@
       function displayGIFsInfo() {
 
         var gif = $(this).attr("data-name");
-        var queryURL = "http://api.giphy.com/v1/gifs/search?q=" +
+        var queryURL = "https://api.giphy.com/v1/gifs/search?q=" +
         gif + "&api_key=dc6zaTOxFJmzC&limit=10;";
 
 
@@ -56,7 +56,7 @@
         }).done(function(response) {
           $("#gifs-view").html(JSON.stringify(response));
           renderButtons();
-          console.log();
+          console.log(queryURL);
         });
       }
 
@@ -102,7 +102,7 @@
         // array
         renderButtons();
         console.log();
-      
+
       });
 
       // Function for displaying the GIFsinfo
